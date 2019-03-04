@@ -1,0 +1,43 @@
+
+<div class="row">
+
+<% for (var i=4;i<9;i++ )  { %>
+<div class="col p-3 bg-ali border">
+2<%= i %>
+</div>
+<% } %>
+
+<% for (var i=0;i<2;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= (mar[i].date).toString().replace(/201903/g,"").replace(/0/g,'') %>
+</div>
+<% } %>
+</div><!-- row-->
+
+<div class="row">
+
+<% for (var i=2;i<9;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= (mar[i].date).toString().replace(/201903/g,"").replace(/0/g,'') %>
+</div>
+<% } %>
+
+</div><!-- row-->
+
+<div class="row">
+<% for (var i=9;i<16;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= (mar[i].date).toString().replace(/201903/g,"").replace(/03/g,"3") %>
+</div>
+<% } %>
+
+</div><!-- row-->
+
+<div class="row">
+<% for (var i=16;i<23;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= (mar[i].date).toString().replace(/201903/g,"").replace(/03/g,"3") %>
+</div>
+<% } %>
+
+</div><!-- row-->
