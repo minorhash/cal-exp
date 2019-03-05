@@ -8,9 +8,11 @@ var mail="minorhash@gmail.com";
 var mon1= require('./js/mon/mon1');
 var mon2= require('./js/mon/mon2');
 var mon3= require('./js/mon/mon3');
+var mon4= require('./js/mon/mon4');
 var m1=mon1(mail)
 var m2=mon2(mail)
 var m3=mon3(mail)
+var m4=mon4(mail)
 
 var getPar=function(req, res, next) {
 par=req.params.id
@@ -25,12 +27,17 @@ cal=m1
 cal=m2
 }else if(par==3){
 cal=m3
+}else if(par==4){
+cal=m4
+}else if(par==5){
+cal=m5
+
 }
 next()}
 
 var chk=function(req, res, next) {
 console.log(par)
-console.log(cal)
+console.log(m4)
 next()}
 
 // get

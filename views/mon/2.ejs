@@ -60,15 +60,24 @@
 <% } %>
 </div><!-- row-->
 
-<% if (cal.length>28) { %>
+<% if (cal.length>27) { %>
+
 <div class="row">
-<% for (var i=23;i<30;i++ )  { %>
+<% for (var i=23;i<28;i++ )  { %>
 <div class="col p-3 bg-ali border">
     <%= (cal[i].date).toString().slice(6) %>
     <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
 </div>
 <% } %>
+
+<% for (var i=1;i<3;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= i %>
+</div>
+<% } %>
+
 </div><!-- row-->
+
 <% } %>
 
 

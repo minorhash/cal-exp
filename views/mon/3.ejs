@@ -9,6 +9,9 @@
 <div align="center" class="col p-3 border">sat</div>
 </div><!-- row-->
 
+<% var d=new Date() %>
+<% var tod=d.getDate() %>
+
 <div class="row">
 
 <% for (var i=4;i<9;i++ )  { %>
@@ -16,6 +19,14 @@
 2<%= i %>
 </div>
 <% } %>
+
+<% if(cal[i].date==tod) {%>
+<div class="col p-3 bg-tom border">
+<%= (cal[i].date).toString().slice(7) %>
+<span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
+</div>
+<% } %>
+
 
 <% for (var i=0;i<2;i++ )  { %>
 <div class="col p-3 bg-ali border">
@@ -29,13 +40,25 @@
 <div class="row">
 
 <% for (var i=2;i<9;i++ )  { %>
-<div class="col p-3 bg-ali border">
 
-    <%= (cal[i].date).toString().slice(7) %>
-
-    <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
+<% if((cal[i].date).toString().slice(7)==tod.toString()) { %>
+<div class="col p-3 bg-tom border">
+<%= (cal[i].date).toString().slice(7) %>
+<span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
 </div>
+<% }else { %>
+<div class="col p-3 bg-ali border">
+<%= (cal[i].date).toString().slice(7) %>
+<span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
+</div>
+
 <% } %>
+
+
+<% } %>
+
+
+
 
 </div><!-- row-->
 
@@ -61,6 +84,7 @@
 </div><!-- row-->
 
 <% if (cal.length>28) { %>
+
 <div class="row">
 <% for (var i=23;i<30;i++ )  { %>
 <div class="col p-3 bg-ali border">
@@ -69,6 +93,22 @@
 </div>
 <% } %>
 </div><!-- row-->
+
+<div class="row">
+
+<div class="col p-3 bg-ali border">
+    <%= (cal[30].date).toString().slice(6) %>
+    <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
+</div>
+
+<% for (var i=1;i<7;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= i %>
+</div>
+<% } %>
+
+</div><!-- row-->
+
 <% } %>
 
 

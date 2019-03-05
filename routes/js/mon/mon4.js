@@ -1,12 +1,12 @@
 var eve=require("evedb");
 //var mail="minorhash@gmail.com";
 
-var mon3;
+var mon4;
 
-var getMon3=function(mail){
-mon3=eve.mon3(mail)
-return mon3;
+var getMon4=function(mail){
+mon4=eve.mon4(mail)
+return mon4;
 
 }
 
-module.exports=getMon3
+module.exports=getMon4
