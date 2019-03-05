@@ -1,14 +1,4 @@
-<div class="row">
-
-<div align="center" class="col p-3 border">sun</div>
-<div align="center" class="col p-3 border">mon</div>
-<div align="center" class="col p-3 border">t</div>
-<div align="center" class="col p-3 border">w</div>
-<div align="center" class="col p-3 border">t</div>
-<div align="center" class="col p-3 border">f</div>
-<div align="center" class="col p-3 border">sat</div>
-</div><!-- row-->
-
+<% include ./day %>
 <% var d=new Date() %>
 <% var tod=d.getDate() %>
 
@@ -27,7 +17,6 @@
 </div>
 <% } %>
 
-
 <% for (var i=0;i<2;i++ )  { %>
 <div class="col p-3 bg-ali border">
     <%= (cal[i].date).toString().slice(7) %>
@@ -42,7 +31,7 @@
 <% for (var i=2;i<9;i++ )  { %>
 
 <% if((cal[i].date).toString().slice(7)==tod.toString()) { %>
-<div class="col p-3 bg-tom border">
+<div class="col p-3 border border-tom">
 <%= (cal[i].date).toString().slice(7) %>
 <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
 </div>
@@ -51,9 +40,7 @@
 <%= (cal[i].date).toString().slice(7) %>
 <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
 </div>
-
 <% } %>
-
 
 <% } %>
 
