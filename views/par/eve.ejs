@@ -1,15 +1,27 @@
+<div class="row">
+
+<div align="center" class="col p-3 border">sun</div>
+<div align="center" class="col p-3 border">mon</div>
+<div align="center" class="col p-3 border">t</div>
+<div align="center" class="col p-3 border">w</div>
+<div align="center" class="col p-3 border">t</div>
+<div align="center" class="col p-3 border">f</div>
+<div align="center" class="col p-3 border">sat</div>
+</div><!-- row-->
 
 <div class="row">
 
 <% for (var i=4;i<9;i++ )  { %>
 <div class="col p-3 bg-ali border">
-    2<%= i %>
+2<%= i %>
 </div>
 <% } %>
 
 <% for (var i=0;i<2;i++ )  { %>
 <div class="col p-3 bg-ali border">
-<%= (eve[i].date).toString().replace(/201903/g,"").replace(/0/g,'') %>
+    <%= (cal[i].date).toString().slice(7) %>
+
+<span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
 </div>
 <% } %>
 </div><!-- row-->
@@ -18,7 +30,10 @@
 
 <% for (var i=2;i<9;i++ )  { %>
 <div class="col p-3 bg-ali border">
-<%= (eve[i].date).toString().replace(/201903/g,"").replace(/0/g,'') %>
+
+    <%= (cal[i].date).toString().slice(7) %>
+
+    <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
 </div>
 <% } %>
 
@@ -27,7 +42,8 @@
 <div class="row">
 <% for (var i=9;i<16;i++ )  { %>
 <div class="col p-3 bg-ali border">
-<%= (eve[i].date).toString().replace(/201903/g,"").replace(/03/g,"3") %>
+    <%= (cal[i].date).toString().slice(6) %>
+    <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
 </div>
 <% } %>
 
@@ -36,8 +52,24 @@
 <div class="row">
 <% for (var i=16;i<23;i++ )  { %>
 <div class="col p-3 bg-ali border">
-<%= (eve[i].date).toString().replace(/201903/g,"").replace(/03/g,"3") %>
+
+    <%= (cal[i].date).toString().slice(6) %>
+
+    <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
 </div>
 <% } %>
-
 </div><!-- row-->
+
+<% if (cal.length>28) { %>
+<div class="row">
+<% for (var i=23;i<30;i++ )  { %>
+<div class="col p-3 bg-ali border">
+    <%= (cal[i].date).toString().slice(6) %>
+    <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
+</div>
+<% } %>
+</div><!-- row-->
+<% } %>
+
+
+

@@ -1,35 +1,45 @@
 var express = require('express');
 var router = express.Router();
-var mail="minorhash@gmail.com";
+// glob
+var par,mon
 
+var mail="minorhash@gmail.com";
 var mar= require('./js/mar');
 var feb= require('./js/feb');
 var marmail=mar(mail)
 var febmail=feb(mail)
-var mon,cal
+
+var getPar=function(req, res, next) {
+par=req.params.id
+next()}
 
 var getMon=function(req, res, next) {
 var d=new Date();
 mon=d.getMonth()
-    if(mon==2){
+    if(par==3){
 cal=marmail
-    }else if(mon==1){
+    }else if(par==2){
 cal=febmail
     }
 next()}
 
 var chk=function(req, res, next) {
-console.log(mar(mail))
+console.log(par)
+console.log(cal)
 next()}
 
-var ren=function(req, res, next) {
-    res.render('index', { title: 'Express',
-mon:mon+1,
-cal:cal
+// get
+var gcb= function(req, res, next) {
+
+res.render("cal", {
+title: par,
+par:par,mon:mon+1
 
 });
 }
 
-router.get('/',[getMon,chk,ren]);
+router.get('/cal-:id', [getPar,getMon,chk,gcb])
+// post
+
 
 module.exports = router;

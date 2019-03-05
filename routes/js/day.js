@@ -6,7 +6,7 @@ console.log(t)
 var dat=d.getDate();
 var day=d.getDay();
  console.log(dat)
- console.log(day)
+ console.log("day:"+day)
 
 //var offset=9
 

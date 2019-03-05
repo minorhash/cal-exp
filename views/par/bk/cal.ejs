@@ -1,40 +1,71 @@
-<div id="container-fluid">
 <div class="row">
 
-<div class="col-md-2 hidden-xs"></div>
+<div align="center" class="col p-3 border">sun</div>
+<div align="center" class="col p-3 border">mon</div>
+<div align="center" class="col p-3 border">t</div>
+<div align="center" class="col p-3 border">w</div>
+<div align="center" class="col p-3 border">t</div>
+<div align="center" class="col p-3 border">f</div>
+<div align="center" class="col p-3 border">sat</div>
+</div><!-- row-->
 
-<div class="well col-md-3">
-<img class="img-responsive center-block" src="img/cd/355.png"/>
+<div class="row">
 
-<div class="title20">
-<div style="text align=center"></div> 
+<% for (var i=4;i<9;i++ )  { %>
+<div class="col p-3 bg-ali border">
+2<%= i %>
 </div>
+<% } %>
+
+<% for (var i=0;i<2;i++ )  { %>
+<div class="col p-3 bg-ali border">
+    <%= (cal[i].date).toString().slice(7) %>
+
+<span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
 </div>
+<% } %>
+</div><!-- row-->
 
-<div class="well col-md-5">
+<div class="row">
 
+<% for (var i=2;i<9;i++ )  { %>
+<div class="col p-3 bg-ali border">
 
-【お支払い方法】<br>
-お支払い方法は下記の2種類からお選びいただけます。<br><br>
+    <%= (cal[i].date).toString().slice(7) %>
 
+    <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
+</div>
+<% } %>
 
-<h22>paypal</h22><br><br>
-対応クレジットカード<br>
-(VISA／MasterCard／アメリカンエキスプレス／JCBの提携カード）<br>
+</div><!-- row-->
 
-<img class="img-responsive"  src="img/shop/checkout_banner.png" width=300,height=50/>
-<br>
+<div class="row">
+<% for (var i=9;i<16;i++ )  { %>
+<div class="col p-3 bg-ali border">
+    <%= (cal[i].date).toString().slice(6) %>
+    <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
+</div>
+<% } %>
 
-<h22>paidy</h22><br><br>
-コンビニエンスストア決済・キャリア決済<br>
+</div><!-- row-->
 
-<img class="img-responsive"  src="img/shop/checkout_banner.png" width=300,height=50/>
+<div class="row">
+<% for (var i=16;i<23;i++ )  { %>
+<div class="col p-3 bg-ali border">
 
-</div><!--md4-->
+    <%= (cal[i].date).toString().slice(6) %>
 
+    <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
+</div>
+<% } %>
+</div><!-- row-->
 
-<div class="well col-md-2 hidden-xs"></div>
-
-</div><!--row-->
-</div><!--cont-->
+<div class="row">
+<% for (var i=23;i<30;i++ )  { %>
+<div class="col p-3 bg-ali border">
+    <%= (cal[i].date).toString().slice(6) %>
+    <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
+</div>
+<% } %>
+</div><!-- row-->
 

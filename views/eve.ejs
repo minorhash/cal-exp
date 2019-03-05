@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<% include par/head %>
+<body>
+
+<!--menu-->
+<% include par/nav %>
+<!--menu-->
+
+<div class="row">
+    <div class="col-md-1 col-xs-12" >
+
+        <br><br><br><br><br>
+        <% var num=Number(par)-1 %>
+        <%= num %>
+        <% if(num>0) {%>
+        <a href="eve-<%=num  %>">
+            <% } else { %>
+        <a href="eve-1">
+            <% } %>
+<span class="p-1 mx-3" style="font-size:48px;color:gray"> < </span>
+        </a>
+
+    </div>
+
+
+    <div class="col-md-10 col-xs-12" >
+        <p align="center">  <%= par %>月</p>
+    <% include par/cal %>
+    </div>
+
+    <div class="col-md-1 col-xs-12" >
+        <br><br><br><br><br>
+
+        <a href="eve-<%= Number(par)+1 %>">
+        <span class="p-1 mx-3" style="font-size:48px;color:gray"> > </span>
+        </a>
+    </div>
+</div><!-- row -->
+
+
+</div>
+
+
+<br>
+<div class="footer"><% include par/foot %></div>
+
+
+</body>
+
