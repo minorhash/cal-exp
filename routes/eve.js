@@ -9,10 +9,12 @@ var mon1= require('./js/mon/mon1');
 var mon2= require('./js/mon/mon2');
 var mon3= require('./js/mon/mon3');
 var mon4= require('./js/mon/mon4');
+var mon5= require('./js/mon/mon5');
 var m1=mon1(mail)
 var m2=mon2(mail)
 var m3=mon3(mail)
 var m4=mon4(mail)
+var m5=mon5(mail)
 
 var getPar=function(req, res, next) {
 par=req.params.id

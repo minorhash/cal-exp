@@ -28,13 +28,13 @@ next()}
 
 
 var ren=function(req, res, next) {
-    res.render('index', { title: 'Express',
+res.render('index', { title: 'Express',
 mon:mon+1,
 cal:cal
 
 });
 }
 
-router.get('/',[getMon,chk,ren]);
+router.get('/',[chk,ren]);
 
 module.exports = router;
