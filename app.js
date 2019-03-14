@@ -19,10 +19,10 @@ app.use(logger('dev'));
 
 var indexRouter = require('./routes/index');
 app.use('/', indexRouter);
-var eve= require('./routes/eve');
-app.use('/', eve);
-// var cal= require('./routes/cal');
-// app.use('/', cal);
+// var eve= require('./routes/eve');
+// app.use('/', eve);
+var cal= require('./routes/cal');
+app.use('/', cal);
 
 
 // catch 404 and forward to error handler

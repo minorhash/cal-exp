@@ -1,0 +1,25 @@
+<% include ./day %>
+<br>
+<div class="row">
+<div class="col p-3 bg-ali border">
+<%= mon.length %>
+<%= mon1.length %>
+<%= mon2.length %>
+</div>
+<div class="col p-3 bg-ali border">
+<% var d=new Date(mon[0].date) %>
+<%= d.getDay() %>
+</div>
+</div><!-- row-->
+
+<div class="row">
+<% for (var i=0;i<2;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= (mon[i].date).toString().slice(9) %>
+
+<span class="bg-mis"><a href="<%= mon[i].des %>" target="_blank" ><%= mon[i].eve %> </a></span>
+</div>
+<% } %>
+</div><!-- row-->
+
+

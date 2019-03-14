@@ -7,13 +7,11 @@ var getMon=function(req, res, next) {
 next()}
 
 var chk=function(req, res, next) {
-console.log(m3)
 next()}
 
 
 var ren=function(req, res, next) {
-res.render('index', { title: 'Express',
-mon:mon+1
+res.render('index', { title: 'event'
 
 });
 }
