@@ -8,50 +8,48 @@
 <!--menu-->
 
 <div class="row">
-    <div class="col-md-1 col-xs-12" >
-
-        <br><br><br><br><br>
-
 <% var num=Number(par) %>
+<div class="col-md-12 col-xs-12" >
+
+<div class="d-flex p-1 bg-ali justify-content-center ">
+
+<div class="p-2">
 <% if(num>0) { %>
-        <a href="eve-<%=num-1  %>">
-            <% } else { %>
-        <a href="eve-1">
-            <% } %>
-<span class="p-1 mx-3" style="font-size:48px;color:gray"> < </span>
-        </a>
-
-    </div>
+<a href="eve-<%=num-1  %>">
+<% } else { %>
+<a href="eve-1">
+<% } %>
+<span class="p-1 mx-3" style="font-size:28px;color:gray"> < </span>
+</a></div>
 
 
-    <div class="col-md-10 col-xs-12" >
-        <p align="center">  <%= num %>月</p>
-        <% if(par==1){%>
-    <% include mon/1 %>
-    <% } else if(par==2){ %>
-    <% include mon/2 %>
-    <% } else if(par==3){ %>
-    <% include mon/3 %>
+<p class="p-2" >  <%= num %>月</p>
+
+<div class="p-2">
+<a href="eve-<%= num+1 %>">
+<span class="p-1 mx-3" style="font-size:28px;color:gray"> > </span>
+</a>
+</div>
+</div><!-- d-flex -->
+
+<% include mon/day %>
+<% if(par==1) { %>
+<% include mon/1 %>
+<% } else if(par==2){ %>
+<% include mon/2 %>
+<% } else if(par==3){ %>
+<% include mon/3 %>
 <% } else if(par==4){ %>
 <% include mon/4 %>
 <% } else if(par==5){ %>
 <% include mon/5 %>
-
-    <% } %>
-    </div>
-
-    <div class="col-md-1 col-xs-12 bg-tom" >
-        <br><br><br><br><br>
-
-        <a href="eve-<%= num+1 %>">
-        <span class="p-1 mx-3" style="font-size:48px;color:gray"> > </span>
-        </a>
-    </div>
-</div><!-- row -->
+<% } %>
+</div>
 
 
 </div>
-
+</div><!-- row -->
+</div><!-- cont -->
 
 <br>
 <div class="footer"><% include par/foot %></div>

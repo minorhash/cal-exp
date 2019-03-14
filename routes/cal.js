@@ -1,37 +1,34 @@
 var express = require('express');
+var db= require('evedb');
 var router = express.Router();
 // glob
-var par,mon
-
+var par,cal,num,mon=[]
 var mail="minorhash@gmail.com";
-
-var mon1= require('./js/mon/mon1');
-var mon2= require('./js/mon/mon2');
-var mon3= require('./js/mon/mon3');
-var m1=mon1(mail)
-var m2=mon2(mail)
-var m3=mon3(mail)
-var mon,cal
-
-var getMon=function(req, res, next) {
-var d=new Date();
-mon=d.getMonth()
-if(par==1){
-cal=m1
-}else if(par==2){
-cal=m2
-}else if(par==3){
-cal=m3
-}
-next()}
 
 var getPar=function(req, res, next) {
 par=req.params.id
+    num=Number(par)
+next()}
+
+var getCal=function(req, res, next) {
+    mon=[]
+cal=db.mailCal(mail)
+    var pat=new RegExp("2019-0"+par)
+    var tes=[]
+for (var i=0;i<cal.length;i++){
+tes.push(pat.test(cal[i].date))
+
+if(tes[i]==true){
+mon.push(cal[i])
+}
+}
+
 next()}
 
 var chk=function(req, res, next) {
 console.log(par)
-console.log(cal)
+console.log(mon.length)
+console.log(mon[0])
 next()}
 
 // get
@@ -39,13 +36,14 @@ var gcb= function(req, res, next) {
 
 res.render("cal", {
 title: par,
-par:par,mon:mon+1
+    par:par,
+    mon:mon,
+    num:num
 
 });
 }
 
-router.get('/cal-:id', [getPar,getMon,chk,gcb])
+router.get('/cal-:id', [getPar,getCal,chk,gcb])
 // post
-
 
 module.exports = router;

@@ -1,42 +1,45 @@
 <div class="row">
 
-<div align="center" class="col p-3 border">sun</div>
-<div align="center" class="col p-3 border">mon</div>
-<div align="center" class="col p-3 border">t</div>
-<div align="center" class="col p-3 border">w</div>
-<div align="center" class="col p-3 border">t</div>
-<div align="center" class="col p-3 border">f</div>
-<div align="center" class="col p-3 border">sat</div>
-</div><!-- row-->
-
-<div class="row">
-
-<div class="col p-3 bg-ali border">
-    31
-</div>
-
-<% for (var i=1;i<7;i++ )  { %>
+<% for (var i=28;i<31;i++ )  { %>
 <div class="col p-3 bg-ali border">
 <%= i %>
 </div>
 <% } %><!-- for-->
+
+<% for (var i=0;i<4;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= (cal[i].date).toString().slice(7) %>
+<span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
+</div>
+<% } %><!-- for-->
+
 </div><!-- row-->
 
 <div class="row">
 
-<% for (var i=7;i<14;i++ )  { %>
+<% for (var i=4;i<9;i++ )  { %>
 <div class="col p-3 bg-ali border">
 
-    <%= (cal[i].date).toString().slice(7) %>
+<%= (cal[i].date).toString().slice(7) %>
 
-    <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
+<span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
 </div>
 <% } %>
 
+<% for (var i=9;i<11;i++ )  { %>
+<div class="col p-3 bg-ali border">
+
+<%= (cal[i].date).toString().slice(6) %>
+
+<span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
+</div>
+<% } %>
+
+
 </div><!-- row-->
 
 <div class="row">
-<% for (var i=14;i<21;i++ )  { %>
+<% for (var i=11;i<18;i++ )  { %>
 <div class="col p-3 bg-ali border">
     <%= (cal[i].date).toString().slice(6) %>
     <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
@@ -46,28 +49,28 @@
 </div><!-- row-->
 
 <div class="row">
-<% for (var i=21;i<28;i++ )  { %>
+<% for (var i=18;i<25;i++ )  { %>
 <div class="col p-3 bg-ali border">
 
-    <%= (cal[i].date).toString().slice(6) %>
+<%= (cal[i].date).toString().slice(6) %>
 
-    <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
+<span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
 </div>
 <% } %>
 </div><!-- row-->
 
 <% if (cal.length>28) { %>
 <div class="row">
-<% for (var i=28;i<30;i++ )  { %>
+<% for (var i=25;i<30;i++ )  { %>
 <div class="col p-3 bg-ali border">
 
-    <%= (cal[i].date).toString().slice(6) %>
+<%= (cal[i].date).toString().slice(6) %>
 
-    <span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
+<span class="bg-mis"><a href="<%= cal[i].des %>" target="_blank" ><%= cal[i].eve %> </a></span>
 </div>
 <% } %>
 
-<% for (var i=1;i<6;i++ )  { %>
+<% for (var i=1;i<3;i++ )  { %>
 <div class="col p-3 bg-ali border">
 <%= i %>
 </div>
@@ -77,6 +80,4 @@
 </div><!-- row-->
 
 <% } %>
-
-
 
