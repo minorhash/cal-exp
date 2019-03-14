@@ -1,25 +1,108 @@
+<% var d=new Date(mon[0].date) %>
+<% var day= d.getDay() %>
+
 <% include ./day %>
-<br>
 <div class="row">
+
+<% for (var i=mon1.length-day;i<mon1.length;i++ )  { %>
 <div class="col p-3 bg-ali border">
+<%= (mon1[i].date).toString().slice(8) %>
+<span class="bg-mis"><a href="<%= mon1[i].des %>" target="_blank" >
+<%= mon1[i].eve %> </a></span>
+</div>
+<% } %>
+
+<% for (var i=0;i<7-day;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= (mon[i].date).toString().slice(9) %>
+<span class="bg-mis"><a href="<%= mon[i].des %>" target="_blank" >
+<%= mon[i].eve %> </a></span>
+</div>
+<% } %>
+
+</div><!-- row-->
+
+<div class="row">
+
+<% for (var i=7-day;i<9-day;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= (mon[i].date).toString().slice(9) %>
+<span class="bg-mis"><a href="<%= mon[i].des %>" target="_blank" >
+        <%= mon[i].eve %> </a></span>
+</div>
+<% } %>
+
+<% for (var i=9-day;i<14-day;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= (mon[i].date).toString().slice(9) %>
+<span class="bg-mis"><a href="<%= mon[i].des %>" target="_blank" >
+        <%= mon[i].eve %> </a></span>
+</div>
+<% } %>
+
+</div><!-- row-->
+
+<div class="row">
+
+<% for (var i=14-day;i<21-day;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= (mon[i].date).toString().slice(8) %>
+<span class="bg-mis"><a href="<%= mon[i].des %>" target="_blank" >
+        <%= mon[i].eve %> </a></span>
+</div>
+<% } %>
+
+</div><!-- row-->
+
+<div class="row">
+
+<% for (var i=21-day;i<28-day;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= (mon[i].date).toString().slice(8) %>
+<span class="bg-mis"><a href="<%= mon[i].des %>" target="_blank" >
+        <%= mon[i].eve %> </a></span>
+</div>
+<% } %>
+
+</div><!-- row-->
+
+<div class="row">
+
+<% for (var i=28-day;i<mon.length;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= (mon[i].date).toString().slice(8) %>
+<span class="bg-mis"><a href="<%= mon[i].des %>" target="_blank" >
+        <%= mon[i].eve %> </a></span>
+</div>
+<% } %>
+
+</div><!-- row-->
+
+<div class="row">
+
+<% for (var i=35-day;i<mon.length;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= (mon[i].date).toString().slice(8) %>
+<span class="bg-mis"><a href="<%= mon[i].des %>" target="_blank" >
+        <%= mon[i].eve %> </a></span>
+</div>
+<% } %>
+<% for (var i=0;i<mon.length-30+5;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= (mon2[i].date).toString().slice(9) %>
+<span class="bg-mis"><a href="<%= mon2[i].des %>" target="_blank" >
+        <%= mon2[i].eve %> </a></span>
+</div>
+<% } %>
+
+
+
+</div><!-- row-->
+
+
+
 <%= mon.length %>
 <%= mon1.length %>
 <%= mon2.length %>
-</div>
-<div class="col p-3 bg-ali border">
-<% var d=new Date(mon[0].date) %>
-<%= d.getDay() %>
-</div>
-</div><!-- row-->
-
-<div class="row">
-<% for (var i=0;i<2;i++ )  { %>
-<div class="col p-3 bg-ali border">
-<%= (mon[i].date).toString().slice(9) %>
-
-<span class="bg-mis"><a href="<%= mon[i].des %>" target="_blank" ><%= mon[i].eve %> </a></span>
-</div>
-<% } %>
-</div><!-- row-->
 
 
