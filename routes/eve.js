@@ -43,7 +43,6 @@ next()}
 
 var chk=function(req, res, next) {
 console.log(par)
-console.log(m3)
 next()}
 
 // get

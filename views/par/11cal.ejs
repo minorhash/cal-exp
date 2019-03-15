@@ -67,74 +67,15 @@
 </div><!-- row-->
 
 <div class="row">
-<% if(mon.length-(28-day) > 0 &&  mon.length-(28-day) <= 7){ %>
-
-<% for (var i=28-day;i<mon.length;i++ ) { %>
-<div class="col p-3 bg-ali border">
-<%= (mon[i].date).toString().slice(8) %>
-<span class="bg-mis"><a href="<%= mon[i].des %>" target="_blank" >
-<%= mon[i].eve %> </a></span>
-</div>
-<% } %><!-- for-->
-
-<% for (var i=0;i<7-(mon.length-(28-day));i++ )  { %>
-<div class="col p-3 bg-mis border">
-<%= (mon2[i].date).toString().slice(9) %>
-<span class="bg-mis"><a href="<%= mon2[i].des %>" target="_blank" >
-<%= mon2[i].eve %> </a></span>
-</div>
-<% } %><!-- for-->
-
-<% } else if(mon.length-(28-day)>7) { %>
-<% for (var i=28-day;i<mon.length-1;i++ )  { %>
-<div class="col p-3 bg-bei border">
-<%= (mon[i].date).toString().slice(8) %>
-<span class="bg-mis"><a href="<%= mon[i].des %>" target="_blank" >
-<%= mon[i].eve %> </a></span>
-</div>
-
-<% } %><!-- for-->
-
-<% } else { %>
 
 <% for (var i=28-day;i<mon.length;i++ )  { %>
-<div class="col p-3 bg-lg border">
+<div class="col p-3 bg-ali border">
 <%= (mon[i].date).toString().slice(8) %>
 <span class="bg-mis"><a href="<%= mon[i].des %>" target="_blank" >
 <%= mon[i].eve %> </a></span>
 </div>
-<% } %><!-- for-->
+<% } %>
 
-<% for (var i=0;i<(7-(mon.length-(28-day)));i++ )  { %>
-<div class="col p-3 bg-ali border">
-<%= (mon2[i].date).toString().slice(9) %>
-<span class="bg-mis"><a href="<%= mon2[i].des %>" target="_blank" >
-<%= mon2[i].eve %> </a></span>
-</div>
-<% } %><!-- for-->
-
-<% } %><!-- else-->
 
 </div><!-- row-->
-
-<div class="row">
-<% if(par==3 || par==6) { %>
-<div class="col p-3 bg-ali border">
-<%= (mon[mon.length-1].date).toString().slice(8) %>
-<span class="bg-mis"><a href="<%= mon[mon.length-1].des %>" target="_blank" >
-<%= mon[mon.length-1].eve %> </a></span>
-</div>
-
-<% for (var i=0;i<6;i++ )  { %>
-<div class="col p-3 bg-ali border">
-<%= (mon2[i].date).toString().slice(9) %>
-<span class="bg-mis"><a href="<%= mon2[i].des %>" target="_blank" >
-<%= mon2[i].eve %> </a></span>
-</div>
-<% } %><!-- for-->
-
-<% } %><!-- if-->
-
-</div><!-- row-->
-
 

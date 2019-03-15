@@ -58,4 +58,18 @@
 <% } %>
 </div><!-- row-->
 
+<div class="row">
+
+<div class="col p-3 bg-ali border">
+<%= (mon[mon.length].date).toString().slice(8) %>
+<span class="bg-mis"><a href="<%= mon[i].des %>" target="_blank" ><%= mon[i].eve %> </a></span>
+</div>
+<% for (var i=23;i<30;i++ )  { %>
+<div class="col p-3 bg-ali border">
+<%= (mon[i].date).toString().slice(8) %>
+<span class="bg-mis"><a href="<%= mon[i].des %>" target="_blank" ><%= mon[i].eve %> </a></span>
+</div>
+<% } %>
+
+</div><!-- row-->
 

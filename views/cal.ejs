@@ -31,8 +31,18 @@
 </a>
 </div>
 </div><!-- d-flex -->
-
+<% if(par>1 && par<9){ %>
 <% include par/1cal %>
+<% } else if (par==9) {%>
+<% include par/9cal %>
+<% } else if (par==10) {%>
+<% include par/10cal %>
+<% } else if (par==11) {%>
+<% include par/11cal %>
+<% } else if (par==12) {%>
+<% include par/12cal %>
+
+<% } %>
 
     <div class="col-md-1 col-xs-12" ></div>
 </div><!-- row -->
