@@ -2,7 +2,7 @@ var express = require('express');
 var db= require('caldb');
 var router = express.Router();
 // glob
-var par,cal,num
+var par,cal,num,day
 var mon=[],mon1=[],mon2=[]
 var tes=[],tes1=[],tes2=[]
 var mail="minorhash@gmail.com";
@@ -36,13 +36,17 @@ if(tes2[i]==true){mon2.push(cal[i])}
 
 }
 
+var d=new Date(mon[0].date)
+day=d.getDay()
+
 next()}
 
 var chk=function(req, res, next) {
 console.log(par)
+console.log(day)
 console.log(mon.length)
 console.log(mon[0])
-console.log(tes1.length)
+console.log(mon1.length)
 console.log(mon2.length)
 next()}
 
