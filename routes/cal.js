@@ -10,6 +10,15 @@ var mail="minorhash@gmail.com";
 var getPar=function(req, res, next) {
 par=req.params.id
 num=Number(par)
+
+if(par > 8){
+par=8
+    res.redirect("/cal-8")
+}else if(par < 2){
+    res.redirect("/cal-2")
+
+}
+
 next()}
 
 var getCal=function(req, res, next) {
